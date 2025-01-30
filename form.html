@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .sm {
+          @apply text-[#6465af] text-xl;
+        }
+
+        .input {
+          @apply border border-[#a69eea] border-2 border rounded-md px-2 py-1 w-[300px];
+        }
+      }
+    </style>
+  </head>
+
+  <style>
+    :root {
+      --fontt: "Roboto", serif;
+    }
+
+    body {
+      font-family: var(--fontt);
+    }
+  </style>
+  <body class="grid place-content-center h-[100vh]">
+    <div class="bg-[#b0b3fe] h-[600px] w-[700px] px-5 flex items-center">
+      <div class="bg-white px-2 border rounded-md">
+        <h1 class="text-[#363582] text-[33px] mb-3">
+          Restaurent Reservation Form
+        </h1>
+        <form action="https://formspree.io/f/xrbekgby" method="POST">
+          <label for="nm" class="sm">Name</label>
+          <div class="flex gap-2">
+            <input
+              type="text"
+              id="nm"
+              name="name"
+              placeholder="First"
+              class="input"
+            />
+            <input
+              type="text"
+              id="nm"
+              name="name"
+              placeholder="Second"
+              class="input"
+            />
+          </div>
+
+          <div class="flex gap-2">
+            <div class="flex gap-2 mt-2 flex-col">
+              <label for="em" class="sm">Email</label>
+              <input
+                type="email"
+                id="em"
+                name="email"
+                placeholder="Email"
+                class="input"
+              />
+            </div>
+
+            <div class="flex gap-2 mt-2 flex-col">
+              <label for="nem" class="sm">Phone</label>
+              <input
+                type="number"
+                id="nem"
+                name="phonenumber"
+                placeholder="01***"
+                class="input"
+              />
+            </div>
+          </div>
+
+          <div class="flex gap-2">
+            <div class="flex gap-2 mt-2 flex-col">
+              <label for="dt" class="sm">Reservation Date</label>
+              <input
+                type="datetime"
+                id="dt"
+                placeholder="MM/DD/YYYY"
+                class="input"
+                name="date"
+              />
+            </div>
+
+            <div class="flex gap-2 mt-2 flex-col">
+              <label for="tm" class="sm">Reservation Time</label>
+              <input type="time" id="tm" class="input" name="Reservationt" />
+            </div>
+          </div>
+
+          <div class="flex gap-2 mt-2 flex-col">
+            <label for="txxt" class="sm"
+              >How many person will be with you</label
+            >
+            <input type="text" id="txxt" class="input" name="Reservationp" />
+          </div>
+
+          <div class="flex gap-2 mt-2 flex-col">
+            <label for="para" class="sm">Notes</label>
+            <input
+              type="text"
+              name="notes"
+              id="para"
+              class="input w-[640px] h-[100px]"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="bg-[#6865ea] w-[640px] mt-2 py-2 sm text-white"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
